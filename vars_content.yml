@@ -1,0 +1,10 @@
+---
+  - name: copy module
+    hosts: all
+    vars:
+      my_content: " this file is created using vars concept"
+    tasks:
+      - name: copying the file from CM to MM
+        copy: 
+          content: "{{ my_content }}"
+          dest: /tmp/devops.txt

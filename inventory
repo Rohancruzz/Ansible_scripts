@@ -1,0 +1,9 @@
+[ALL]
+172.31.42.171
+172.31.44.249
+
+
+[ALL:vars]
+ansible_user=ansadmin
+ansible_connection=ssh
+ansible_password=ansadmin

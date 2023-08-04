@@ -1,0 +1,9 @@
+---
+  - name: printing the variable
+    hosts: all
+    vars: 
+        my_content: "hellonaveen"
+    tasks:
+      - name: printing the variable using debug module
+        debug:
+           var: my_content 

@@ -1,0 +1,11 @@
+---
+  - name:  printing the variable using debug module
+    hosts: all
+    tasks:
+      - name:  printing the variable using debug module
+        shell:  |
+          cat /tmp/devops.txt
+        register: data
+      - name:  print the register variable
+        debug:
+          var: data

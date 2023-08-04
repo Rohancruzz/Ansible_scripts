@@ -1,0 +1,17 @@
+--- 
+  - name: A playbook to test async and poll
+    hosts: all
+    become: yes
+    tasks:
+      - name: install httpd
+        yum:
+          name: httpd
+          state: present
+      - name: wait for the serivce
+        wait_for:
+          timeout: 60
+
+      - name: start the service
+        service:
+          name: httpd
+          state: started

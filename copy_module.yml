@@ -1,0 +1,8 @@
+---
+  - name: copy module
+    hosts: all
+    tasks:
+      - name: copying the file from CM to MM
+        copy: 
+          src: /home/ansadmin/playbooks/devops.txt
+          dest: /tmp

@@ -1,0 +1,14 @@
+
+---
+  - name: This is a play
+    hosts: all
+    tasks:
+      - name: extract the tomcat
+        unarchive:
+          src: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
+          dest: /home/ansadmin/tomcat/
+          remote_src: yes
+      - name: renaming the file
+        shell:  |
+          mv /home/ansadmin/tomcat/apache-tomcat-9.0.78 /home/ansadmin/tomcat/apache-tomcat
+
